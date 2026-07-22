@@ -28,7 +28,7 @@ public class UserController {
     public ResponseEntity<UserDto> getUserById(
             @RequestHeader("Authorization") String jwt,
             @PathVariable("id") Long id
-    ) throws UserException {
+    ) throws UserException, Exception {
         User user = userService.getUserById(id);
         return ResponseEntity.ok(UserMapper.toDTO(user));
     }
