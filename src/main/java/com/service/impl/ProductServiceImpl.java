@@ -1,9 +1,11 @@
 package com.service.impl;
 
+import com.modal.Category;
 import com.modal.Product;
 import com.modal.Store;
 import com.modal.User;
 import com.payload.dto.ProductDto;
+import com.repository.CategoryRepository;
 import com.repository.ProductRepository;
 import com.repository.StoreRepository;
 import com.service.ProductService;
@@ -21,6 +23,7 @@ public class ProductServiceImpl implements ProductService {
 
     private final ProductRepository productRepository;
     private final StoreRepository storeRepository;
+    private final CategoryRepository categoryRepository;
     @Override
     public ProductDto createProduct(ProductDto productDto, User user) throws Exception {
         Store store = storeRepository.findById(
@@ -29,7 +32,13 @@ public class ProductServiceImpl implements ProductService {
                 () -> new Exception("Store not found")
         );
 
-        Product product = ProductMapper.tOEntity(productDto, store);
+        Category category = categoryRepository.findById(
+                productDto.getCategoryId()
+        ).orElseThrow(
+                () -> new Exception("Category not found")
+        );
+
+        Product product = ProductMapper.tOEntity(productDto, store, category);
         Product savedProduct= productRepository.save(product);
         return ProductMapper.toDTO(savedProduct);
     }
@@ -48,6 +57,15 @@ public class ProductServiceImpl implements ProductService {
         product.setSellingPrice(product.getSellingPrice());
         product.setBrand(product.getBrand());
         product.setUpdatedAt(LocalDateTime.now());
+
+        if(productDto.getCategoryId() != null) {
+            Category category = categoryRepository.findById(
+                    productDto.getCategoryId()
+            ).orElseThrow(
+                    () -> new Exception("Category not found")
+            );
+            product.setCategory(category);
+        }
 
         Product savedProduct = productRepository.save(product);
 

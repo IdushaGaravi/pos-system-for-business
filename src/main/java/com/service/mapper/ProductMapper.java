@@ -1,5 +1,6 @@
 package com.service.mapper;
 
+import com.modal.Category;
 import com.modal.Product;
 import com.modal.Store;
 import com.payload.dto.ProductDto;
@@ -13,6 +14,7 @@ public class ProductMapper {
                 .sku(product.getSku())
                 .description(product.getDescription())
                 .mrp(product.getMrp())
+                .category(CategoryMapper.toDTO(product.getCategory()))
                 .sellingPrice(product.getSellingPrice())
                 .brand(product.getBrand())
                 .storeId(product.getStore() != null?product.getStore().getId():null)
@@ -23,10 +25,14 @@ public class ProductMapper {
                 //.categoryId(product.getId())
     }
 
-    public static Product tOEntity(ProductDto productDto, Store store) {
+    public static Product tOEntity(ProductDto productDto,
+                                   Store store,
+                                   Category category) {
 
         return Product.builder()
                 .name(productDto.getName())
+                .store(store)
+                .category(category)
                 .sku(productDto.getSku())
                 .description(productDto.getDescription())
                 .mrp(productDto.getMrp())
