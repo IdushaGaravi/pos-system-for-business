@@ -4,7 +4,7 @@ import com.configuration.JwtProvider;
 import com.exceptions.UserException;
 import com.modal.User;
 import com.service.UserService;
-import com.service.repository.UserRepository;
+import com.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;

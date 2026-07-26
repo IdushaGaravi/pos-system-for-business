@@ -1,7 +1,7 @@
 package com.service.impl;
 
 import com.modal.User;
-import com.service.repository.UserRepository;
+import com.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

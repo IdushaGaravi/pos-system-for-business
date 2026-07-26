@@ -8,7 +8,7 @@ import com.payload.dto.UserDto;
 import com.payload.response.AuthResponse;
 import com.service.AuthService;
 import com.service.mapper.UserMapper;
-import com.service.repository.UserRepository;
+import com.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
