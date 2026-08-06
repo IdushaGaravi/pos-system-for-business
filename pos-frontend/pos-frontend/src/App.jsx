@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from 'react-router'
+import { Route, Routes } from 'react-router'
 import './App.css'
 import CashierRoutes from './routes/CashierRoutes'
 
