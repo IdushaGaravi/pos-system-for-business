@@ -18,12 +18,6 @@ const cartItems = [
     quantity: 3,
     sellingPrice: 499.99
   },
-  {
-    name: "Men slim shirt (Pack 0f 2)",
-    sku: "SKU123",
-    quantity: 3,
-    sellingPrice: 499.99
-  },
 ]
 const CartSection = () => {
   const [showHeldOrdersDialog, setShowHeldOrdersDialog] = useState(false)
@@ -47,7 +41,7 @@ const CartSection = () => {
           </div>
         </div>
 
-        <div className="p-4 space-y-3">
+        <div className="flex-1 overflow-y-auto min-h-0 p-4 space-y-3">
           {cartItems.map((item, index) => (
             <CartItem item={item} key={index} />
           ))}
