@@ -1,7 +1,4 @@
-import { DialogFooter, DialogTitle } from "../../../components/ui/dialog"
-import { DialogHeader } from "../../../components/ui/dialog"
-import { DialogContent } from "../../../components/ui/dialog"
-import { Dialog } from "../../../components/ui/dialog"
+import { DialogFooter, DialogTitle, DialogHeader, DialogContent, Dialog } from "../../../components/ui/dialog"
 import OrderTable from "./OrderTable"
 import OrderDetails from "./OrderDetails/OrderDetails"
 import { Button } from "../../../components/ui/button"
