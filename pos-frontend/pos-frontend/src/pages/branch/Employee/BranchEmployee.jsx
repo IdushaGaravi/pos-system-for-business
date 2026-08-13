@@ -1,4 +1,3 @@
-import React from 'react'
 import AddEmployeeDialog from './AddEmployeeDialog'
 import EmployeeState from './EmployeeState'
 import EmployeeTable from './EmployeeTable'

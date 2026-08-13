@@ -5,27 +5,22 @@ import { ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
 
 const COLORS = ["#130f40", "#30336b", "#95afc0", "#833471", "#84817a"];
 
-const TopProducts = () => {
+const PaymentMethodCharts = () => {
     const data = [
         {
-            name: "men shirt",
+            name: "UPI",
             value: 34,
             percentage: 20
         },
         {
-            name: "t-shirt",
+            name: "CASH",
             value: 10,
             percentage: 10
         },
         {
-            name: "shoes",
+            name: "CARD",
             value: 50,
             percentage: 40
-        },
-        {
-            name: "watches",
-            value: 34,
-            percentage: 30
         },
     ]
 
@@ -63,7 +58,7 @@ const TopProducts = () => {
         <Card>
             <CardHeader>
                 <CardTitle className='text-xl font-semibold'>
-                    Product Performance
+                    Payment Method
                 </CardTitle>
             </CardHeader>
             <CardContent>
@@ -100,4 +95,4 @@ const TopProducts = () => {
     )
 }
 
-export default TopProducts
+export default PaymentMethodCharts;

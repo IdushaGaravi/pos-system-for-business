@@ -35,7 +35,7 @@ const SalesChart = () => {
         <Card>
             <CardHeader>
                 <CardTitle className='text-xl font-semibold'>
-                    Payment Breakdown
+                    Daily Sales
                 </CardTitle>
             </CardHeader>
             <CardContent>
