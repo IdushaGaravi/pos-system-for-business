@@ -81,6 +81,12 @@
   --sidebar-accent-foreground: var(--accent-foreground);
   --sidebar-border: var(--border);
   --sidebar-ring: var(--ring);
+
+   --chart-1: oklch(52.7% 0.154 150.069);
+  --chart-2: hsl(142.1 76.2% 36.3%);
+  --chart-3: hsl(240 4.8% 60%);
+  --chart-4: hsl(38 92% 50%);
+  --chart-5: hsl(0 84.2% 60.2%);
 }
 
 .dark {
@@ -116,6 +122,12 @@
   --sidebar-accent-foreground: var(--accent-foreground);
   --sidebar-border: var(--border);
   --sidebar-ring: var(--ring);
+
+  --chart-1: hsl(142.1 70.6% 45.3%);
+  --chart-2: hsl(160 60% 45%);
+  --chart-3: hsl(38 92% 50%);
+  --chart-4: hsl(280 65% 60%);
+  --chart-5: hsl(340 75% 55%);
 }
 
 @layer base {
