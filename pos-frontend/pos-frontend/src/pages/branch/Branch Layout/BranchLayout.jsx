@@ -54,7 +54,7 @@ const navItems = [
 const BranchLayout = ({ children }) => {
     return (
         <div className="flex h-screen bg-gradient-to-br from-primary/5 via-background to-primary/10">
-            <BranchSidebar />
+            <BranchSidebar navItems={navItems} branch={branch} />
 
             <div className="flex-1 flex flex-col">
                 <BranchTopbar branch={branch} navItems={navItems} />

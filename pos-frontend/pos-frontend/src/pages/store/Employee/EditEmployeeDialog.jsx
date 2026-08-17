@@ -1,7 +1,7 @@
-import { Plus } from "lucide-react"
+import { Edit } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
-import EmployeeForm from "../../store/Employee/EmployeeForm"
+import EmployeeForm from "./EmployeeForm"
 
 const roles = [
     "BRANCH_ADMIN",
@@ -9,25 +9,24 @@ const roles = [
     "BRANCH_MANAGER"
 ]
 
-const AddEmployeeDialog = () => {
+const EditEmployeeDialog = ({employee}) => {
   return (
     <Dialog>
       <DialogTrigger>
-        <Button>
-          <Plus />
-          Add Employee
+        <Button variant="outline">
+          <Edit />
         </Button>
       </DialogTrigger>
 
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Add New Employee</DialogTitle>
+          <DialogTitle>Edit Employee</DialogTitle>
         </DialogHeader>
         
-        <EmployeeForm roles={roles} />
+        <EmployeeForm roles={roles} initialData={employee} />
       </DialogContent>
     </Dialog>
   )
 }
 
-export default AddEmployeeDialog
+export default EditEmployeeDialog

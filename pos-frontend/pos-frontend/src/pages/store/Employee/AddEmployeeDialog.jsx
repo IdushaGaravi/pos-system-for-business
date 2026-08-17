@@ -1,7 +1,7 @@
 import { Plus } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
-import EmployeeForm from "../../store/Employee/EmployeeForm"
+import EmployeeForm from "./EmployeeForm"
 
 const roles = [
     "BRANCH_ADMIN",

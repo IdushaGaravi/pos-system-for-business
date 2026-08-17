@@ -15,6 +15,7 @@ function App() {
         {/* <Route path='/cashier/*' element={<CashierRoutes />} /> */}
         <Route path='/' element={<Navigate to="/store" />}/>
         <Route path='/store/*' element={<StoreRoutes />}/>
+        <Route path='/branch/*' element={<BranchRoutes />}/>
       </Routes>
       
     </>
