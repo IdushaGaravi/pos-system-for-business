@@ -5,6 +5,7 @@ import Branches from "../pages/store/Branch/Branches"
 import Products from "../pages/store/Product/Products"
 import Categories from "../pages/store/Category/Categories"
 import StoreEmployee from "../pages/store/Employee/StoreEmployee"
+import StoreInfo from "../pages/store/storeInfo/StoreInfo"
 
 const StoreRoutes = () => {
     return (
@@ -21,7 +22,7 @@ const StoreRoutes = () => {
             <Route path='sales' element={<Branches />} />
             <Route path='reports' element={<Branches />} />
             <Route path='upgrade' element={<Branches />} />
-            <Route path='settings' element={<Branches />} />
+            <Route path='settings' element={<StoreInfo />} />
         </Route>
     </Routes>
     )
