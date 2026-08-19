@@ -6,6 +6,7 @@ import Products from "../pages/store/Product/Products"
 import Categories from "../pages/store/Category/Categories"
 import StoreEmployee from "../pages/store/Employee/StoreEmployee"
 import StoreInfo from "../pages/store/storeInfo/StoreInfo"
+import Upgrade from "../pages/store/upgrade/upgrade"
 
 const StoreRoutes = () => {
     return (
@@ -21,7 +22,7 @@ const StoreRoutes = () => {
             <Route path='alerts' element={<Branches />} />
             <Route path='sales' element={<Branches />} />
             <Route path='reports' element={<Branches />} />
-            <Route path='upgrade' element={<Branches />} />
+            <Route path='upgrade' element={<Upgrade />} />
             <Route path='settings' element={<StoreInfo />} />
         </Route>
     </Routes>

@@ -26,7 +26,6 @@ const EditStoreForm = ({
   initialValues,
   onSubmit,
   onCancel,
-  isEditing = false,
 }) => {
 
   const handleSubmit = async (values) => {
@@ -42,18 +41,6 @@ const EditStoreForm = ({
     >
       {({ isSubmitting, setFieldValue }) => (
         <Form className="space-y-4 py-2 pr-2">
-
-          <div className="space-y-2">
-            <label htmlFor="image" className="block text-sm font-medium">
-              Image URL
-            </label>
-            <Field
-              as={Input}
-              id="image"
-              name="image"
-              placeholder="Paste image URL"
-            />
-          </div>
 
           <div className="space-y-2">
             <Label htmlFor="brand" className="block text-sm font-medium">
