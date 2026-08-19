@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router'
 import AdminLayout from '../pages/superAdmin/AdminLayout'
-import AdminDashboard from '../pages/superAdmin/AdminDashboard'
+import AdminDashboard from '../pages/superAdmin/Dashboard/AdminDashboard'
 import AdminSettings from '../pages/superAdmin/AdminSettings'
 import StoreList from '../pages/superAdmin/StoreList'
 import PendingRequest from '../pages/superAdmin/PendingRequest'
