@@ -2,11 +2,9 @@ import { Navigate, Route, Routes } from 'react-router'
 import './App.css'
 import CashierRoutes from './routes/CashierRoutes'
 import CustomerLookup from './pages/cashier/Customer Management/CustomerLookup'
-import BranchLayout from './pages/branch/Branch Layout/BranchLayout'
 import BranchRoutes from './routes/BranchRoutes'
-import StoreDashboardLayout from './pages/store/Dashboard/StoreDahboardLayout'
 import StoreRoutes from './routes/StoreRoutes'
-import AdminLayout from './pages/superAdmin/AdminLayout'
+import AdminRoutes from './routes/AdminRoutes'
 
 function App() {
 
@@ -17,7 +15,7 @@ function App() {
         <Route path='/' element={<Navigate to="/store" />}/>
         <Route path='/store/*' element={<StoreRoutes />}/>
         <Route path='/branch/*' element={<BranchRoutes />}/>
-        <Route path='/super-admin/*' element={<AdminLayout />}/>
+        <Route path='/super-admin/*' element={<AdminRoutes />}/>
       </Routes>
       
     </>
