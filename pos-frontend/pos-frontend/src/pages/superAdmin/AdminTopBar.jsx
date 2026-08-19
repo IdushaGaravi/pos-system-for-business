@@ -1,0 +1,43 @@
+import { Bell, User } from "lucide-react"
+import { Button } from "@/components/ui/button"
+
+const store = {
+  name: "Rutika Shopping",
+  address: "street 123, near Sardar Garden"
+}
+
+const userProfile = {
+  name: "Pablo Panadya",
+  email: "pablo@example.com"
+}
+
+const AdminTopBar = () => {
+  return (
+    <div>
+      <header className="bg-background border-b px-6 py-4 flex items-center justify-between">
+        <div>
+          <h1 className="font-bold text-2xl">{"Admin Dashboard"}</h1>
+        </div>
+
+        <div className="flex items-center gap-4">
+          <Button>
+            <Bell className="h-5 w-5" />
+          </Button>
+
+          <div className="flex items-center gap-3">
+            <div className="h-9 w-9 rounded-full bg-primary/10 flex items-center justify-center">
+              <User />
+            </div>
+
+            <div className="hidden md:block">
+              <p className="text-sm font-medium text-foreground">{userProfile.name}</p>
+              <p className="text-xs text-muted-foreground">{userProfile.email}</p>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+  )
+}
+
+export default AdminTopBar
